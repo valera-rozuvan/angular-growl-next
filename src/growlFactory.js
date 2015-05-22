@@ -188,6 +188,10 @@ angular.module("angular-growl").provider("growl", function() {
 		function onlyUnique() {
 			return _onlyUniqueMessages;
 		}
+		
+		function clearAll() {
+			$rootScope.$broadcast('clear-messages');
+		}
 
 		return {
 			addWarnMessage: addWarnMessage,
@@ -195,7 +199,8 @@ angular.module("angular-growl").provider("growl", function() {
 			addInfoMessage: addInfoMessage,
 			addSuccessMessage: addSuccessMessage,
 			addServerMessages: addServerMessages,
-			onlyUnique: onlyUnique
+			onlyUnique: onlyUnique,
+			clearAll: clearAll
 		};
 	}];
 });
