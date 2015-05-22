@@ -28,6 +28,9 @@ angular.module("angular-growl-next").directive("growl", ["$rootScope", function 
 					}, message.ttl);
 				}
 			}
+			$rootScope.$on('clear-messages', function () {
+				$scope.messages = [] ;
+			});
 			$rootScope.$on("growlMessage", function (event, message) {
 				var found;
 				if (onlyUnique) {

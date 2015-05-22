@@ -1,5 +1,5 @@
 /**
- * angular-growl-next - v0.4.1 - 2015-05-22
+ * angular-growl-next - v0.4.2 - 2015-05-22
  * https://github.com/valera-rozuvan/angular-growl-next
  * Copyright (c) 2015 Marco Rinck; Licensed MIT
  */
@@ -28,6 +28,9 @@ angular.module('angular-growl-next').directive('growl', [
               }, message.ttl);
             }
           }
+          $rootScope.$on('clear-messages', function () {
+            $scope.messages = [];
+          });
           $rootScope.$on('growlMessage', function (event, message) {
             var found;
             if (onlyUnique) {
