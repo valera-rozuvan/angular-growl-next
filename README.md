@@ -17,6 +17,12 @@ present, you only have to provide keys as messages, angular-translate will trans
 
 ##Changelog
 
+**0.4.2** - 22nd May 2015
+
+* This is basically original https://github.com/marcorinck/angular-growl with
+one method added, `clearAll()`. This allows to close all messages
+programmatically with a single function call.
+
 **0.4.0** - 19th Nov 2013
 
 * updated dependency to angularJS 1.2.x, angular-growl-next does not work with 1.0.x anymore (BREAKING CHANGE)
