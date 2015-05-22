@@ -1,4 +1,4 @@
-#angular-growl
+#angular-growl-next
 
 > growl like notifications for angularJS projects, using bootstrap alert classes
 
@@ -19,7 +19,7 @@ present, you only have to provide keys as messages, angular-translate will trans
 
 **0.4.0** - 19th Nov 2013
 
-* updated dependency to angularJS 1.2.x, angular-growl does not work with 1.0.x anymore (BREAKING CHANGE)
+* updated dependency to angularJS 1.2.x, angular-growl-next does not work with 1.0.x anymore (BREAKING CHANGE)
 * new option: only display unique messages, which is the new default, disable to allow same message more than once (BREAKING CHANGE)
 * new option: allow html tags in messages, default is off  you need to
 
@@ -45,9 +45,9 @@ present, you only have to provide keys as messages, angular-translate will trans
 
 ##Installation
 
-You can install angular-growl with bower:
+You can install angular-growl-next with bower:
 
-> bower install angular-growl
+> bower install angular-growl-next
 
 Alternatively you can download the files in the [build folder](build/) manually and include them in your project.
 
@@ -58,17 +58,17 @@ Alternatively you can download the files in the [build folder](build/) manually 
         <script src="angular.min.js"></script>
         <script src="angular-sanitize.min.js"></script>
 
-        <link href="angular-growl.css" rel="stylesheet">
-        <script src="angular-growl.js"></script>
+        <link href="angular-growl-next.css" rel="stylesheet">
+        <script src="angular-growl-next.js"></script>
     </head>
 </html>
 ````
 
-As angular-growl is based on its own angularJS module, you have to alter your dependency list when creating your application
+As angular-growl-next is based on its own angularJS module, you have to alter your dependency list when creating your application
 module:
 
 ````javascript
-var app = angular.module('myApp', ['angular-growl']);
+var app = angular.module('myApp', ['angular-growl-next']);
 ````
 
 Finally, you have to include the directive somewhere in your HTML like this:
@@ -117,7 +117,7 @@ message will not be added to the displayed message list. Set to false, to always
 are already displayed or not:
 
 ````javascript
-var app = angular.module('myApp', ['angular-growl']);
+var app = angular.module('myApp', ['angular-growl-next']);
 
 app.config(['growlProvider', function(growlProvider) {
     growlProvider.onlyUniqueMessages(false);
@@ -132,7 +132,7 @@ However, you can configure a global timeout (TTL) after which notifications shou
 this, you have to configure this during config phase of angular bootstrap like this:
 
 ````javascript
-var app = angular.module('myApp', ['angular-growl']);
+var app = angular.module('myApp', ['angular-growl-next']);
 
 app.config(['growlProvider', function(growlProvider) {
     growlProvider.globalTimeToLive(5000);
@@ -173,7 +173,7 @@ For this to work, you have to declare a dependency to "ngSanitize" (and load the
 module!
 
 ````javascript
-var app = angular.module('myApp', ['angular-growl', 'ngSanitize']);
+var app = angular.module('myApp', ['angular-growl-next', 'ngSanitize']);
 
 app.config(['growlProvider', function(growlProvider) {
     growlProvider.globalEnableHtml(true);
@@ -203,17 +203,17 @@ dependency list:
         <script src="angular.min.js"></script>
         <script src="angular-animate.min.js"></script>
 
-        <link href="angular-growl.css" rel="stylesheet">
-        <script src="angular-growl.js"></script>
+        <link href="angular-growl-next.css" rel="stylesheet">
+        <script src="angular-growl-next.js"></script>
     </head>
 </html>
 ````
 
 ````javascript
-var app = angular.module('myApp', ['angular-growl', 'ngAnimate']);
+var app = angular.module('myApp', ['angular-growl-next', 'ngAnimate']);
 ````
 
-That's it. The angular-growl.css comes with a pre-defined animation of 0.5s to opacity.
+That's it. The angular-growl-next.css comes with a pre-defined animation of 0.5s to opacity.
 
 To configure the animations, just change the _growl-item.*_ classes in the css file to your preference. F.i. to change length
 of animation from 0.5s to 1s do this:
@@ -233,11 +233,11 @@ docs](http://docs.angularjs.org/api/ngAnimate) for more info.
 
 ###Handling of server sent notifications
 
-When doing $http requests, you can configure angular-growl to look automatically for messages in $http responses, so your
+When doing $http requests, you can configure angular-growl-next to look automatically for messages in $http responses, so your
 business logic on the server is able to send messages/notifications to the client and you can display them automagically:
 
 ````javascript
-var app = angular.module('myApp', ['angular-growl']);
+var app = angular.module('myApp', ['angular-growl-next']);
 
 app.config(['growlProvider', '$httpProvider', function(growlProvider, $httpProvider) {
     $httpProvider.responseInterceptors.push(growlProvider.serverMessagesInterceptor);
@@ -262,7 +262,7 @@ response which results in 3 growl messages:
 You can configure the keys, the interceptor is looking for like this:
 
 ````javascript
-var app = angular.module("demo", ["angular-growl"]);
+var app = angular.module("demo", ["angular-growl-next"]);
 
 app.config(["growlProvider", "$httpProvider", function(growlProvider, $httpProvider) {
 	growlProvider.messagesKey("my-messages");

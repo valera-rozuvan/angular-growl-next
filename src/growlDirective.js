@@ -1,4 +1,4 @@
-angular.module("angular-growl").directive("growl", ["$rootScope", function ($rootScope) {
+angular.module("angular-growl-next").directive("growl", ["$rootScope", function ($rootScope) {
 	"use strict";
 
 	return {

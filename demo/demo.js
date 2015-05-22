@@ -1,4 +1,4 @@
-var app = angular.module("demo", ["angular-growl", "ngAnimate", "ngMockE2E"]);
+var app = angular.module("demo", ["angular-growl-next", "ngAnimate", "ngMockE2E"]);
 
 app.config(["growlProvider", "$httpProvider", function(growlProvider, $httpProvider) {
 	growlProvider.globalTimeToLive(2000);

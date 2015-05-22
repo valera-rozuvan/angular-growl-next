@@ -1,4 +1,4 @@
-angular.module("angular-growl").provider("growl", function() {
+angular.module("angular-growl-next").provider("growl", function() {
 	"use strict";
 
 	var _ttl = null,
@@ -188,7 +188,7 @@ angular.module("angular-growl").provider("growl", function() {
 		function onlyUnique() {
 			return _onlyUniqueMessages;
 		}
-		
+
 		function clearAll() {
 			$rootScope.$broadcast('clear-messages');
 		}

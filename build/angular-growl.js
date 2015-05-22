@@ -1,10 +1,10 @@
 /**
- * angular-growl - v0.4.0 - 2013-11-19
- * https://github.com/marcorinck/angular-growl
+ * angular-growl-next - v0.4.0 - 2013-11-19
+ * https://github.com/valera-rozuvan/angular-growl-next
  * Copyright (c) 2013 Marco Rinck; Licensed MIT
  */
-angular.module('angular-growl', []);
-angular.module('angular-growl').directive('growl', [
+angular.module('angular-growl-next', []);
+angular.module('angular-growl-next').directive('growl', [
   '$rootScope',
   function ($rootScope) {
     'use strict';
@@ -63,7 +63,7 @@ angular.module('angular-growl').directive('growl', [
     };
   }
 ]);
-angular.module('angular-growl').provider('growl', function () {
+angular.module('angular-growl-next').provider('growl', function () {
   'use strict';
   var _ttl = null, _enableHtml = false, _messagesKey = 'messages', _messageTextKey = 'text', _messageSeverityKey = 'severity', _onlyUniqueMessages = true;
   this.globalTimeToLive = function (ttl) {

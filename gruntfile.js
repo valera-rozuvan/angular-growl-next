@@ -77,14 +77,14 @@ module.exports = function (grunt) {
 
 			core: {
 				src: ['<%= lib_files.core %>'],
-				dest: '<%= build_dir %>/angular-growl.js'
+				dest: '<%= build_dir %>/angular-growl-next.js'
 			}
 		},
 
 		cssmin: {
 			core: {
 				files: {
-					'build/angular-growl.min.css': '<%= lib_files.css %>'
+					'build/angular-growl-next.min.css': '<%= lib_files.css %>'
 				},
 				options: {
 					'banner': '<%= meta.banner %>',
@@ -96,7 +96,7 @@ module.exports = function (grunt) {
 		uglify: {
 			core: {
 				files: {
-					'<%= build_dir %>/angular-growl.min.js': '<%= concat.core.dest %>'
+					'<%= build_dir %>/angular-growl-next.min.js': '<%= concat.core.dest %>'
 				},
 				options: {
 					banner: '<%= meta.banner %>',
@@ -125,7 +125,7 @@ module.exports = function (grunt) {
 				addFiles: ['.'], // '.' for all files except ingored files in .gitignore
 				commit: true,
 				commitMessage: 'Release v%VERSION%',
-				commitFiles: ['package.json', 'bower.json', 'build/angular-growl.js', 'build/angular-growl.min.js', 'build/angular-growl.min.css', 'README.md'], // '-a' for all files
+				commitFiles: ['package.json', 'bower.json', 'build/angular-growl-next.js', 'build/angular-growl-next.min.js', 'build/angular-growl-next.min.css', 'README.md'], // '-a' for all files
 				createTag: true,
 				tagName: 'v%VERSION%',
 				tagMessage: 'Version %VERSION%',
