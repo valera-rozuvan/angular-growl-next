@@ -87,8 +87,7 @@ module.exports = function (grunt) {
 					'build/angular-growl-next.min.css': '<%= lib_files.css %>'
 				},
 				options: {
-					'banner': '<%= meta.banner %>',
-					'report': 'gzip'
+					'banner': '<%= meta.banner %>'
 				}
 			}
 		},
@@ -99,8 +98,7 @@ module.exports = function (grunt) {
 					'<%= build_dir %>/angular-growl-next.min.js': '<%= concat.core.dest %>'
 				},
 				options: {
-					banner: '<%= meta.banner %>',
-					report: 'gzip'
+					banner: '<%= meta.banner %>'
 				}
 			}
 		},
